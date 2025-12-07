@@ -1,0 +1,24 @@
+<view class="page" style="padding:20rpx;">
+  <view style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12rpx;">
+    <text style="font-size:30rpx; font-weight:bold;">我的作品</text>
+    <button bindtap="openCreate">+ 新增作品</button>
+  </view>
+
+  <view wx:if="{{works.length === 0}}" style="text-align:center; color:#888; margin-top:40rpx;">
+    <text>暂无作品，点击右上角新增</text>
+  </view>
+
+  <block wx:for="{{works}}" wx:key="id">
+    <view class="work-item" style="display:flex; align-items:center; padding:12rpx 0; border-bottom:1rpx solid #eee;">
+      <image src="{{item.imageLocal || '/images/default-artwork.png'}}" style="width:120rpx;height:80rpx;border-radius:6rpx;margin-right:12rpx;"></image>
+      <view style="flex:1;">
+        <text style="font-weight:bold; display:block;">{{item.title}}</text>
+        <text style="color:#666; display:block; margin-top:6rpx;">作者: {{item.author || '我'}}</text>
+      </view>
+      <view style="display:flex; flex-direction:column;">
+        <button bindtap="editWork" data-id="{{item.id}}" style="margin-bottom:6rpx;">编辑</button>
+        <button bindtap="deleteWork" data-id="{{item.id}}" type="warn">删除</button>
+      </view>
+    </view>
+  </block>
+</view>

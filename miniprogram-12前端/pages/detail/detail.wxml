@@ -1,0 +1,30 @@
+<view class="page" style="padding:20rpx;">
+  <!-- 作品图片 -->
+  <image src="{{artwork.imageLocal || '/images/default-artwork.png'}}"
+         mode="aspectFill"
+         style="width:100%;height:300rpx;border-radius:8rpx;"></image>
+
+  <!-- 作品信息 -->
+  <view style="margin-top:10rpx;">
+    <text style="font-size:32rpx;">{{artwork.title}}</text>
+    <text style="color:#888;display:block;margin-top:6rpx;">作者：{{artwork.author}}</text>
+    <text style="color:#888;display:block;margin-top:6rpx;">时代：{{artwork.era}}</text>
+  </view>
+
+  <!-- 收藏 + 购物车操作 -->
+  <view style="margin-top:20rpx; display:flex; align-items:center; gap:10rpx;">
+    <button bindtap="toggleCollect" style="flex:1;">
+      {{isCollected ? '取消收藏' : '收藏'}}
+    </button>
+
+    <!-- 加入购物车 -->
+    <button bindtap="addToCart" style="flex:1;">加入购物车</button>
+  </view>
+
+  <!-- 购物车数量操作 -->
+  <view style="margin-top:20rpx; display:flex; align-items:center; gap:10rpx;">
+    <button bindtap="decreaseQuantity">-</button>
+    <text>{{cartQuantity}}</text>
+    <button bindtap="increaseQuantity">+</button>
+  </view>
+</view>

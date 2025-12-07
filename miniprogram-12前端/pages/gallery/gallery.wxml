@@ -1,0 +1,24 @@
+<view class="container">
+
+<scroll-view class="video-list" scroll-y="true">
+  <block wx:for="{{videos}}" wx:key="filePath">
+    <view class="video-item">
+      <video
+        src="{{item.filePath}}"
+        controls
+        autoplay="{{false}}"
+        initial-time="0"
+        loop
+        muted
+        class="video-player"
+      ></video>
+      <view class="video-info">
+        <input class="video-name" value="{{item.name}}" placeholder="请输入名称"
+               bindinput="onNameInput" data-index="{{index}}" />
+        <button bindtap="onDeleteTap" data-index="{{index}}">删除</button>
+      </view>
+    </view>
+  </block>
+</scroll-view>
+
+</view>

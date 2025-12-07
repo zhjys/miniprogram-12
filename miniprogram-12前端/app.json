@@ -1,0 +1,26 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/culture/culture",
+    "pages/detail/detail",
+    "pages/profile/profile",
+    "pages/cart/cart",
+    "pages/news/news",
+    "pages/newsdetail/newsdetail",
+    "pages/artisans/artisans",
+    "pages/artisandetail/artisandetail",
+    "pages/mycollect/mycollect",
+    "pages/myworks/myworks",
+    "pages/myposts/myposts",
+    "pages/settings/settings",
+    "pages/login/login",
+    "pages/register/register"
+  ],
+  "window": {
+    "navigationBarTitleText": "文化鸟笼小程序",
+    "navigationBarBackgroundColor": "#7b3f21",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f5f0e6",
+    "backgroundTextStyle": "light"
+  }
+}

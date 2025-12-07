@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="title">用户注册</view>
+
+  <input class="input" placeholder="请输入用户名" bindinput="onUsernameInput" />
+  <input class="input" placeholder="请输入密码" password="true" bindinput="onPasswordInput" />
+  <input class="input" placeholder="再次输入密码" password="true" bindinput="onPassword2Input" />
+
+  <button class="btn" bindtap="doRegister">注册</button>
+
+  <view class="tips">
+    已有账号？
+    <text class="link" bindtap="goLogin">去登录</text>
+  </view>
+</view>

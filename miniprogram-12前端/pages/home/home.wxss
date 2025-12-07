@@ -1,0 +1,97 @@
+/* 整体页面 */
+.page {
+  padding-bottom: 48rpx;
+  background-color: #f7f4ef; /* 更柔和的米色背景 */
+}
+
+/* 轮播图 */
+.carousel {
+  width: 100%;
+  height: 360rpx; /* 提高视觉比 */
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 8rpx 20rpx rgba(0,0,0,0.12);
+}
+
+/* 六宫格 */
+.menu-grid {
+  margin-top: 10rpx;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20rpx 32rpx; /* 左右更舒适 */
+  justify-content: space-between;
+}
+
+.card {
+  width: 30%;
+  background: #ffffff;
+  padding: 28rpx 10rpx;
+  margin-bottom: 32rpx;
+  border-radius: 22rpx; /* 更圆润 */
+  text-align: center;
+  box-shadow: 0 6rpx 16rpx rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.card:active {
+  transform: scale(0.96); /* 点击缩放反馈 */
+}
+
+.icon {
+  width: 90rpx;
+  height: 90rpx;
+  margin-bottom: 14rpx;
+}
+
+.card-text {
+  font-size: 28rpx;
+  color: #333;
+  font-weight: 500;
+}
+
+/* 推荐作品区 */
+.recommend {
+  padding: 20rpx 26rpx;
+}
+
+.title {
+  font-size: 34rpx;
+  font-weight: 700;
+  margin-bottom: 20rpx;
+  color: #50321d; /* 提升文化感 */
+}
+
+.rec-card {
+  margin-bottom: 26rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  overflow: hidden;
+  box-shadow: 0 6rpx 18rpx rgba(0,0,0,0.08);
+}
+
+.rec-img {
+  width: 100%;
+  height: 220rpx; /* 更高，更震撼 */
+  object-fit: cover;
+}
+
+.rec-info {
+  padding: 16rpx;
+}
+
+.small {
+  font-size: 26rpx;
+  color: #777;
+  margin-top: 6rpx;
+}
+
+/* 细节优化 */
+page {
+  background-color: #f7f4ef;
+}

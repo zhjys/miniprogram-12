@@ -1,0 +1,28 @@
+<topnav></topnav>
+
+<view class="page">
+
+  <!-- 左侧分类 -->
+  <view class="category-left">
+    <block wx:for="{{categories}}" wx:key="id">
+      <view 
+        class="category-item {{item.id == currentCategoryId ? 'active' : ''}}" 
+        bindtap="selectCategory" 
+        data-id="{{item.id}}"
+      >
+        {{item.name}}
+      </view>
+    </block>
+  </view>
+
+  <!-- 右侧作品 -->
+  <view class="content-right">
+    <block wx:for="{{artworks}}" wx:key="id">
+      <view class="card" bindtap="openDetail" data-id="{{item.id}}">
+        <image src="{{item.imageLocal}}" mode="aspectFill"></image>
+        <text>{{item.title}}</text>
+      </view>
+    </block>
+  </view>
+
+</view>

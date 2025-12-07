@@ -1,0 +1,24 @@
+<view class="page" style="padding:20rpx;">
+  <view style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12rpx;">
+    <text style="font-size:30rpx; font-weight:bold;">我的帖子</text>
+    <button bindtap="openCreate">+ 发布帖子</button>
+  </view>
+
+  <view wx:if="{{posts.length === 0}}" style="text-align:center; color:#888; margin-top:40rpx;">
+    <text>暂无帖子，点击右上角发布</text>
+  </view>
+
+  <block wx:for="{{posts}}" wx:key="id">
+    <view class="post-item" style="padding:12rpx 0; border-bottom:1rpx solid #eee;">
+      <view style="display:flex; justify-content:space-between;">
+        <text style="font-weight:bold;">{{item.title}}</text>
+        <text style="color:#999;">{{item.createdAt}}</text>
+      </view>
+      <text style="color:#666; display:block; margin-top:8rpx;">{{item.content}}</text>
+      <view style="margin-top:8rpx; display:flex; justify-content:flex-end;">
+        <button bindtap="editPost" data-id="{{item.id}}" style="margin-right:8rpx;">编辑</button>
+        <button bindtap="deletePost" data-id="{{item.id}}" type="warn">删除</button>
+      </view>
+    </view>
+  </block>
+</view>

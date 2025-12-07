@@ -1,0 +1,20 @@
+<view class="page" style="padding:20rpx;">
+  <view wx:if="{{favorites.length === 0}}" style="text-align:center; margin-top:50rpx;">
+    <text>暂无收藏</text>
+  </view>
+
+  <block wx:for="{{favorites}}" wx:key="id">
+    <view class="favorite-item" style="display:flex; align-items:center; margin-bottom:20rpx; border-bottom:1rpx solid #eee; padding-bottom:10rpx;">
+      <image src="{{item.imageLocal || '/images/default-artwork.png'}}" style="width:100rpx;height:100rpx;border-radius:8rpx;margin-right:20rpx;"></image>
+      <view style="flex:1;">
+        <text style="font-weight:bold;display:block;">{{item.title}}</text>
+        <text style="display:block;color:#666;margin-top:6rpx;">作者: {{item.author || '未知'}}</text>
+        <text style="display:block;color:#666;margin-top:4rpx;">时代: {{item.era || '未知'}}</text>
+      </view>
+      <view>
+        <button bindtap="viewDetail" data-id="{{item.artworkId}}" style="margin-bottom:5rpx;">查看</button>
+        <button bindtap="removeFavorite" data-id="{{item.artworkId}}" type="warn">取消收藏</button>
+      </view>
+    </view>
+  </block>
+</view>

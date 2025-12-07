@@ -1,0 +1,9 @@
+<scroll-view class="top-nav" scroll-x="true" scroll-with-animation="true">
+  <view class="nav-button" bindtap="goHome">首页</view>
+  <view class="nav-button" bindtap="goCulture">文化</view>
+  <view class="nav-button" bindtap="goDetailDemo">详情</view>
+  <view class="nav-button" bindtap="goProfile">个人</view>
+  <view class="nav-button" bindtap="goCart">购物车</view>
+  <view class="nav-button" bindtap="goNews">非遗资讯</view>
+  <view class="nav-button" bindtap="goArtisans">匠人故事</view>
+</scroll-view>

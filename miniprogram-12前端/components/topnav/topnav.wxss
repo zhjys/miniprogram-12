@@ -1,0 +1,41 @@
+/* top-nav.wxss */
+.top-nav {
+  display: flex;
+  align-items: center;
+  background: #fff8f0; /* 传统暖色背景 */
+  padding: 12rpx 0;
+  gap: 16rpx;
+  overflow-x: scroll; /* 横向滑动 */
+  white-space: nowrap;
+  box-shadow: 0 2rpx 6rpx rgba(0,0,0,0.1);
+  border-bottom: 1rpx solid #e8dfd4;
+}
+
+/* 滚动条隐藏（可选） */
+.top-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 120rpx;
+  height: 60rpx;
+  padding: 0 16rpx;
+  font-size: 28rpx;
+  color: #6b3b1b; /* 深棕色文字 */
+  background: linear-gradient(135deg, #fdf0e0, #fde6c8); /* 渐变效果 */
+  border-radius: 30rpx; /* 圆角 */
+  box-shadow: 0 4rpx 8rpx rgba(107,59,27,0.15);
+  text-align: center;
+  white-space: nowrap;
+  flex-shrink: 0; /* 防止压缩 */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* 点击/按下效果 */
+.nav-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2rpx 4rpx rgba(107,59,27,0.2);
+}

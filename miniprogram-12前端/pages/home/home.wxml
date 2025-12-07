@@ -1,0 +1,63 @@
+<!-- home.wxml -->
+<topnav></topnav>
+
+<view class="page">
+
+  <!-- 轮播图 -->
+  <swiper indicator-dots autoplay interval="3500" class="carousel">
+    <block wx:for="{{banners}}" wx:for-item="banner" wx:key="index">
+      <swiper-item>
+        <image src="{{banner.imageLocal}}" mode="aspectFill" class="banner-img"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- 六宫格导航 -->
+  <view class="menu-grid">
+    <view class="card" bindtap="openGallery">
+      <image class="icon" src="/images/icon1.png" />
+      <text>视频</text>
+    </view>
+
+    <view class="card" bindtap="openNinePalace">
+      <image class="icon" src="/images/icon2.png" />
+      <text>九宫</text>
+    </view>
+
+    <view class="card" bindtap="openQuick">
+      <image class="icon" src="/images/icon3.png" />
+      <text>快捷</text>
+    </view>
+
+    <view class="card" bindtap="openCategory">
+      <image class="icon" src="/images/icon4.png" />
+      <text>文化分类</text>
+    </view>
+
+    <view class="card" bindtap="openArtworks">
+      <image class="icon" src="/images/icon5.png" />
+      <text>作品列表</text>
+    </view>
+
+    <view class="card" bindtap="openArticles">
+      <image class="icon" src="/images/icon6.png" />
+      <text>文章</text>
+    </view>
+  </view>
+
+  <!-- 推荐作品 -->
+  <view class="recommend">
+    <text class="title">推荐作品</text>
+
+    <block wx:for="{{artworks}}" wx:for-item="art" wx:key="id">
+      <view class="rec-card" bindtap="openDetail" data-id="{{art.id}}">
+        <image src="{{art.imageLocal}}" class="rec-img" mode="aspectFill" />
+        <view class="rec-info">
+          <text class="rec-title">{{art.title}}</text>
+          <text class="small">作者：{{art.author}} · 年代：{{art.era}}</text>
+        </view>
+      </view>
+    </block>
+
+  </view>
+</view>

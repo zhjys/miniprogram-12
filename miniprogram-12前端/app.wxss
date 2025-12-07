@@ -1,0 +1,15 @@
+page {
+  background-color: #f5f0e6;
+  font-family: "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+}
+.card {
+  background: linear-gradient(#fffaf1, #f6efe0);
+  border-radius: 18rpx;
+  box-shadow: 0 6rpx 12rpx rgba(0,0,0,0.08);
+  padding: 28rpx;
+  margin: 20rpx;
+}
+.title { font-size: 30rpx; color: #6b3b1b; text-align: center; margin-bottom: 20rpx; }
+.small-text { color: #9b8d7d; font-size: 22rpx; }
+.row { display:flex; align-items:center; }
+.icon { width: 80rpx; height:80rpx; margin-right: 18rpx; }

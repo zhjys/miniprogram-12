@@ -1,0 +1,17 @@
+<topnav></topnav>
+
+<view class="profile-container">
+  <view class="profile-header">
+    <image class="avatar" src="{{avatarUrl}}"></image>
+    <text class="nickname">{{nickname}}</text>
+    <text class="bio">{{bio}}</text>
+  </view>
+
+  <view class="menu">
+    <button class="menu-btn" bindtap="openCollect">📌 我的收藏</button>
+    <button class="menu-btn" bindtap="openWorks">🎨 我的作品</button>
+    <button class="menu-btn" bindtap="openPosts">📝 我的帖子</button>
+    <button class="menu-btn" bindtap="openCart">🛒 我的购物车</button>
+    <button class="menu-btn" bindtap="openSettings">⚙️ 系统设置</button>
+  </view>
+</view>

@@ -1,0 +1,18 @@
+<topnav></topnav>
+
+<view class="page" style="padding:20rpx;">
+  <view class="header">
+    <text class="title">非遗资讯</text>
+  </view>
+
+  <block wx:for="{{newsList}}" wx:key="id">
+    <view class="news-item" bindtap="openNewsDetail" data-id="{{item.id}}">
+      <image src="{{item.image || '/images/default-news.png'}}" class="news-image" mode="aspectFill"></image>
+      <view class="news-body">
+        <text class="news-title">{{item.title}}</text>
+        <text class="news-date">{{item.date}}</text>
+        <text class="news-summary">{{item.summary}}</text>
+      </view>
+    </view>
+  </block>
+</view>

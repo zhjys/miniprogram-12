@@ -1,0 +1,16 @@
+<topnav></topnav>
+
+<view class="page" style="padding:20rpx;">
+  <view class="header"><text class="title">匠人故事</text></view>
+
+  <block wx:for="{{artisansList}}" wx:key="id">
+    <view class="artisan-item" bindtap="openArtisanDetail" data-id="{{item.id}}">
+      <image src="{{item.image || '/images/default-artisan.png'}}" class="artisan-image" mode="aspectFill"></image>
+      <view class="artisan-body">
+        <text class="artisan-name">{{item.name}}</text>
+        <text class="artisan-skill">技能：{{item.skill}}</text>
+        <text class="artisan-summary">{{item.summary}}</text>
+      </view>
+    </view>
+  </block>
+</view>
